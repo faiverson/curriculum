@@ -20,7 +20,7 @@ const source_sans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: 'I\'m Fabian',
-  description: 'I am a Software Developer with 20 years of experience in different environments and projects, working on highly performing teams and always focused on delivering client oriented solutions. My expertise revolves around Javascript and PHP (different frameworks and CMS), HTML, CSS',
+  description: 'I\'m a Software Developer with 20 years of experience in different environments and projects, working on highly performing teams and always focused on delivering client oriented solutions. My expertise revolves around Javascript and PHP (different frameworks and CMS), HTML, CSS',
 }
 
 export default function RootLayout({

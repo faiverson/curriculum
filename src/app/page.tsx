@@ -16,7 +16,7 @@ export default function Home() {
       <section className="cover">
         <div className="section-center flex px-12">
           <div className="info">
-            <div className="info-title font-source">Hi, I’m</div>
+            <div className="info-title font-source">Hi, I&rsquo;m</div>
             <h1 className="name text-[6em] pr-4 relative">Fabian Torres</h1>
             <div className="flex flex-col text-boldGrey">
               <div className="more-item">👨‍💻 Senior Software Developer</div>
@@ -130,7 +130,7 @@ export default function Home() {
               <div className="text"><span><p>Drupal, Zend, Codeigniter, WordPress, Joomla, Slim, Yii, Tonic, CakePHP</p></span></div>
             </div>
             <div className="item">
-              <div className="text"><span>Tools &amp; IDE: DreamWeaver, Sublime, Text, Eclipse, NetBeans, Aptana, Websphere, PHPStorm</span></div>
+              <div className="text"><span>Tools & IDE: DreamWeaver, Sublime, Text, Eclipse, NetBeans, Aptana, Websphere, PHPStorm</span></div>
             </div>
             <div className="item">
               <div className="text"><span><p>Prototype, MooTools, Extjs, Backbone.js, jQuery, Node.js, Express Js, Require.js, Angular.js, Backbone, Marionette,</p></span></div>
@@ -179,10 +179,10 @@ export default function Home() {
               <ul className="list-disc">
                 <li>My profile is: http://www.toptal.com/resume/fabian-torres</li>
                 <li>Toptal is a marketplace for software developers and companies</li>
-                <li>I’ve been working in different projects with different clients, I’ve knowking new technologies and I’ve tried to focus on Javascript and all the things related to it</li>
+                <li>I’ve been working in different projects with different clients, I&#39;ve learning new technologies and I&#39;ve tried to focus on Javascript and all the things related to it</li>
                 <li>For example: Angular, Node.js, Backbone</li>
                 <li>Contribute to different projects for numerous US clients</li>
-                <li>Developed Law Firm Matrix (one-page layout), a lawyer's system to manage clients, accounts, revenue among others</li>
+                <li>Developed Law Firm Matrix (one-page layout), a lawyer&#39;s system to manage clients, accounts, revenue among others</li>
                 <li>Collaborated with architecture definition</li>
                 <li>Carried out front-end development of the system</li>
                 <li>Technologies: Backbone, Marionette, Node.js</li>
@@ -293,7 +293,7 @@ export default function Home() {
                 <div className="item">
                   <div className="title">Senior Software Engineer</div>
                   <div className="company">Onyxcorp LLC</div>
-                  <div className="date">2020.12 - 2023.09 (2 years &amp; 9 months)</div>
+                  <div className="date">2020.12 - 2023.09 (2 years & 9 months)</div>
                 </div>
               </div>
             </div>
@@ -303,7 +303,7 @@ export default function Home() {
                 <div className="item">
                   <div className="title">Senior Software Engineer</div>
                   <div className="company">Toptal</div>
-                  <div className="date">2013.03 - 2020.12 (7 years &amp; 9 months) </div>
+                  <div className="date">2013.03 - 2020.12 (7 years & 9 months) </div>
                 </div>
               </div>
             </div>
@@ -313,7 +313,7 @@ export default function Home() {
                 <div className="item">
                   <div className="title">Software Developer Engineer</div>
                   <div className="company">Santex América</div>
-                  <div className="date">2009.12 - 2013.03 (3 years &amp; 3 months)</div>
+                  <div className="date">2009.12 - 2013.03 (3 years & 3 months)</div>
                 </div>
               </div>
             </div>
@@ -323,7 +323,7 @@ export default function Home() {
                 <div className="item">
                   <div className="title">Software Developer</div>
                   <div className="company">Mindsmack</div>
-                  <div className="date">2007.01 - 2009.12 (2 years &amp; 11 months)</div>
+                  <div className="date">2007.01 - 2009.12 (2 years & 11 months)</div>
                 </div>
               </div>
             </div>
@@ -343,7 +343,7 @@ export default function Home() {
                 <div className="item">
                   <div className="title">System Engineer</div>
                   <div className="company">UTN</div>
-                  <div className="date">2000.03 - 2007.12 (7 years &amp; 9 months)</div>
+                  <div className="date">2000.03 - 2007.12 (7 years & 9 months)</div>
                 </div>
               </div>
             </div>
@@ -353,7 +353,7 @@ export default function Home() {
                 <div className="item">
                   <div className="title">High School Diploma</div>
                   <div className="company">San Antonio De Padua</div>
-                  <div className="date">1995.03  - 1999.11 (5 years &amp; 8 months)</div>
+                  <div className="date">1995.03  - 1999.11 (5 years & 8 months)</div>
                 </div>
               </div>
             </div>
