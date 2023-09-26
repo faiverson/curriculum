@@ -1,0 +1,388 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-plex;
+    background-color: rgb(18, 18, 18);
+  }
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  transition: color 0.2s ease 0s, background-color 0.25s ease 0s, border-color 0.5s ease 0s, opacity 0.25s ease 0s, fill 0.15s ease 0s;
+}
+
+.header {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 117rem;
+  padding: 0px 3rem;
+  height: 50px;
+}
+
+.cover {
+  overflow: hidden;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  word-break: break-word;
+  background-color: rgb(61, 65, 71);
+  display: flex;
+  height: 550px;
+}
+
+.info {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 1em 0px;
+}
+
+.info-title {
+  font-size: 2em;
+  line-height: 3rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: rgb(189, 193, 199);
+}
+
+.name {
+  position: relative;
+  z-index: 0;
+  margin: 0px 0px 0.2em;
+  font-weight: 900;
+  line-height: 1.08em;
+  color: rgb(255, 255, 255);
+}
+
+.name::after {
+  position: absolute;
+  z-index: -1;
+  bottom: 0.15em;
+  left: -1.41em;
+  display: inline-block;
+  width: 3.45em;
+  height: 0.36em;
+  content: "";
+  background-color: rgb(45, 112, 246);
+}
+
+.more-item {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0.5em;
+}
+
+.button-wrapper {
+  position: relative;
+  max-width: 21em;
+  margin-top: 2em;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 0.1em 1.2em 0px;
+  border: 0px;
+  border-radius: 3.2em;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 2.6;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(61, 65, 71);
+  background-color: rgb(243, 253, 83);
+}
+
+.confetti-yellow {
+  position: absolute;
+  top: -1.2em;
+  right: 4em;
+}
+
+.confetti-black {
+  position: absolute;
+  bottom: 2em;
+  left: 0em;
+}
+
+.confetti-blue {
+  position: absolute;
+  right: 1.5em;
+  bottom: 10em;
+}
+
+.summary,
+.overview,
+.work,
+.skills,
+.accomplishments,
+.education,
+.languages,
+.timeline {
+  padding: 3em 0 1em;
+}
+
+.summary-icon {
+  position: absolute;
+  left: -13.5em;
+}
+
+.summary-wrapper {
+    position: relative;
+    display: flex;
+    min-height: 19.4em;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.summary-icon::before {
+    position: absolute;
+    top: 12.72em;
+    left: -97em;
+    display: inline-block;
+    width: 100em;
+    height: 2.35em;
+    background: rgb(45, 112, 246);
+    content: "";
+}
+
+.profile {
+  @apply relative flex justify-center text-center;
+  width: 50%;
+}
+
+.section-center {
+  @apply container mx-auto flex-auto max-w-6xl
+}
+
+.subtitle {
+  @apply text-white text-xl uppercase font-bold mb-4
+}
+
+.wrapper-item {
+  width: calc(50% - 1.6em);
+  position: relative;
+  overflow: hidden;
+  margin-top: 0em;
+}
+
+.wrapper-item .item {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  min-height: 16.4em;
+  align-items: center;
+  padding: 0px 0px 2em;
+}
+
+.wrapper-item .item::before {
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  width: 14.4em;
+  height: 14.4em;
+  border-radius: 50%;
+  content: "";
+  background: rgb(61, 65, 71);
+}
+
+.item .icon {
+  position: absolute;
+  top: 0.8em;
+  left: 10.5em;
+}
+
+.wrapper-item:nth-child(2n) .icon {
+  left: 9.7em;
+  top: 1.5em;
+  transform: rotate(-80deg);
+}
+
+.number {
+  @apply relative text-white font-bold;
+  font-size: 5em;
+  padding-left: 0.2em;
+}
+
+.number::before {
+  position: absolute;
+  z-index: -1;
+  top: 0.35em;
+  left: 0.25em;
+  width: 0.2125em;
+  height: 0.4875em;
+  background: rgb(45, 112, 246);
+  content: "";
+}
+
+.number + div {
+  position: relative;
+  display: flex;
+  flex: 1 1 0%;
+  align-items: flex-end;
+  padding-left: 1em;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.5;
+  text-transform: capitalize;
+  color: rgb(211, 214, 217);
+}
+
+.skills .item {
+  color: rgb(189, 193, 199);
+  position: relative;
+  display: flex;
+  padding: 0px 2em 2em 0px;
+  width: 50%;
+}
+
+.skills .item::before {
+  position: absolute;
+  top: 0.4rem;
+  left: 1.3rem;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  border-width: 0.4em;
+  border-style: solid;
+  background-color: rgb(18, 18, 18);
+  border-color: rgb(243, 253, 83);
+  border-radius: 50%;
+  content: "";
+}
+
+.skills .text {
+  margin-left: 2.5em;
+  font-size: 1.4em;
+  color: rgb(189, 193, 199);
+}
+
+.accomplishments .icon {
+  @apply absolute w-full;
+  top: 50%;
+}
+
+.icon::before {
+  position: absolute;
+  top: calc(50% + 42px);
+  left: 110px;
+  display: inline-block;
+  width: 100em;
+  height: 18px;
+  background: rgb(45, 112, 246);
+  content: "";
+}
+
+.accomplishments .icon::after {
+  position: absolute;
+  top: calc(50% + 47px);
+  left: 110px;
+  display: inline-block;
+  width: 100em;
+  height: 4px;
+  background: white;
+  content: "";
+}
+
+.accomplishments li::before {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-width: 0.4em;
+  border-style: solid;
+  background-color: rgb(18, 18, 18);
+  border-color: #2D70F6;
+  border-radius: 50%;
+  content: "";
+}
+
+.accomplishments li {
+  margin-bottom: 10px;
+  padding-left: 2em;
+  position: relative;
+}
+
+.timeline .row {
+  @apply relative flex mb-4;
+}
+
+.row:nth-child(2n) {
+  justify-content: flex-start;
+}
+
+.row:nth-child(2n-1) {
+  justify-content: flex-end;
+}
+
+.line::before {
+  position: absolute;
+  left: 50%;
+  top: 1em;
+  bottom: 0px;
+  width: 0.1em;
+  background-color: rgb(255, 255, 255);
+  content: "";
+}
+
+.timeline .item-wrapper {
+  @apply w-1/2 relative;
+}
+
+.timeline .row:nth-child(2n-1) .item-wrapper {
+  padding-left: 1.5em;
+}
+.timeline .item {
+  @apply flex flex-col;
+}
+
+.timeline .row:nth-child(2n) .item {
+  @apply flex flex-col pr-6;
+  text-align: right;
+}
+
+.timeline .dot {
+  position: absolute;
+  z-index: 1;
+  top: 0.5em;
+  width: 0.5em;
+  height: 0.5em;
+  border-width: 0.5em;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: white;
+  background-color: white;
+}
+
+.timeline .row:nth-child(2n) .dot {
+  right: -0.5em;
+}
+
+.timeline .row:nth-child(2n-1) .dot {
+  left: -0.5em;
+}
+
+.company {
+  @apply text-lg;
+}
+
+.date {
+  @apply text-base text-boldGrey;
+}
+
+.title {
+  @apply text-lg font-bold;
+}

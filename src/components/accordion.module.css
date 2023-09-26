@@ -1,0 +1,43 @@
+.accordion {
+  @apply pt-4 pb-2 w-full mb-8;
+  background-color: rgb(61, 65, 71);
+}
+
+.accordion.left {
+  border-left: 0.8em solid rgb(243, 253, 83);
+}
+
+.accordion.right {
+  border-right: 0.8em solid rgb(243, 253, 83);
+}
+
+.accordion.left.secondary,
+.accordion.right.secondary {
+  border-color: #2D70F6;
+}
+
+.acc-header {
+  @apply flex flex-col gap-y-2;
+}
+
+.right .acc-header {
+  @apply pl-4;
+}
+
+.toggle-btn {
+  width: 1.3em;
+  height: 1.3em;
+  transition: all 0.3s ease 0s;
+}
+
+.description {
+  border-top: 0.1em dashed rgb(189, 193, 199);
+}
+
+.left .description {
+  @apply pt-4 px-4;
+}
+
+.right .description {
+  @apply pt-4 px-8;
+}
