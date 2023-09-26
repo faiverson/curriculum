@@ -73,7 +73,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* overview */}
       <section className="overview">
         <div className="section-center px-12">
@@ -148,7 +147,6 @@ export default function Home() {
             <div className="item">
               <div className="text"><span><p>REST, SOAP, GraphQL</p></span></div>
             </div>
-
             <div className="item">
               <div className="text"><span>MySQL, SQL Server, MongoDB, PostgreSQL</span></div>
             </div>
@@ -179,32 +177,39 @@ export default function Home() {
             </Accordion>
             <Accordion company={'Toptal'} date={'2013.03 - 2020.12 (7 years & 9 months)'} position={'Senior Software Engineer'} alignment={'right'}>
               <ul className="list-disc">
-                <li>Worked with project managers, developers, quality assurance and customers to resolve technical issues.</li>
-                <li>Provided technical support using knowledge of complex technology to solve problems and support new projects.</li>
-                <li>Developed robust, scalable, modular and API-centric infrastructures.</li>
-                <li>Analyzed proposed technical solutions based on customer requirements.</li>
-                <li>Promoted experience with Kubernetes, Docker and Amazon Web Services.</li>
-                <li>Coordinated efficient large-scale software deployments.</li>
+                <li>My profile is: http://www.toptal.com/resume/fabian-torres</li>
+                <li>Toptal is a marketplace for software developers and companies</li>
+                <li>I’ve been working in different projects with different clients, I’ve knowking new technologies and I’ve tried to focus on Javascript and all the things related to it</li>
+                <li>For example: Angular, Node.js, Backbone</li>
+                <li>Contribute to different projects for numerous US clients</li>
+                <li>Developed Law Firm Matrix (one-page layout), a lawyer's system to manage clients, accounts, revenue among others</li>
+                <li>Collaborated with architecture definition</li>
+                <li>Carried out front-end development of the system</li>
+                <li>Technologies: Backbone, Marionette, Node.js</li>
+                <li>Developed Fanattac (one-page layout), a music social network where users can follow artists and promote their own band</li>
               </ul>
             </Accordion>
             <Accordion company={'Santex América'} date={'2009.12 - 2013.03 (3 years & 3 months)'} position={'Software Developer Engineer'} alignment={'left'}>
               <ul className="list-disc">
-                <li>Worked with project managers, developers, quality assurance and customers to resolve technical issues.</li>
-                <li>Provided technical support using knowledge of complex technology to solve problems and support new projects.</li>
-                <li>Developed robust, scalable, modular and API-centric infrastructures.</li>
-                <li>Analyzed proposed technical solutions based on customer requirements.</li>
-                <li>Promoted experience with Kubernetes, Docker and Amazon Web Services.</li>
-                <li>Coordinated efficient large-scale software deployments.</li>
+                <li>Santex is US based, company</li>
+                <li>In these 3 years some projects have required me to do diverse activities such as: Coding and Architecture definition</li>
+                <li>Designed customized solutions for proposals to potential customers.</li>
+                <li>Developed conversion and system implementation plans.</li>
+                <li>I had the chance to write technical documentation to transfer knowledge to other team members</li>
+                <li>Carried out coding and architecture definition</li>
+                <li>Programming Languages: JavaScript, HTML, PHP (OOP), CSS</li>
+                <li>Collaborated with project managers to select ambitious, but realistic coding milestones on pre-release software project development.</li>
               </ul>
             </Accordion>
             <Accordion company={'Mindsmack'} date={'2007.01 - 2009.12 (2 years & 11 months)'} position={'Software Developer'} alignment={'right'}>
               <ul className="list-disc">
-                <li>Worked with project managers, developers, quality assurance and customers to resolve technical issues.</li>
-                <li>Provided technical support using knowledge of complex technology to solve problems and support new projects.</li>
-                <li>Developed robust, scalable, modular and API-centric infrastructures.</li>
-                <li>Analyzed proposed technical solutions based on customer requirements.</li>
-                <li>Promoted experience with Kubernetes, Docker and Amazon Web Services.</li>
-                <li>Coordinated efficient large-scale software deployments.</li>
+                <li>Revised, modularized and updated old code bases to modern development standards, reducing operating costs, and improving functionality.</li>
+                <li>Corrected, modified and upgraded software to improve performance.</li>
+                <li>Coordinated deployments of new software, feature updates and fixes.</li>
+                <li>Tested and deployed scalable and highly available software products.</li>
+                <li>Estimated work hours and tracked progress using Scrum methodology.</li>
+                <li>Wrote clear, clean code for various projects.</li>
+                <li>Worked with design teams and Senior Software Engineers to build customized software products for consumers.</li>
               </ul>
             </Accordion>
             <Accordion company={'ExporTech'} date={'2003.01 - 2003.12 (11 months)'} position={'Junior Software Developer'} alignment={'left'}>
