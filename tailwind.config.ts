@@ -13,9 +13,12 @@ const config: Config = {
         source: ['var(--font-source)'],
       },
       colors: {
-        boldBlack: '#1e1e1e',
-        boldBlackAlternative: '#2a2a2a',
-        boldGrey: '#bdc1c7',
+        'bold-black': '#1e1e1e',
+        'bold-black-alternative': '#2a2a2a',
+        'bold-grey': '#BDC1C7',
+        'background': '#3D4147',
+        'blue-confetti': '#2D70F6',
+        'yellow-confetti': '#F3FD53',
       },
       aspectRatio: {
         'cover': '35/38',

@@ -2,6 +2,7 @@
 
 import Accordion from 'components/accordion'
 import Image from 'next/image'
+import Link from 'next/link'
 import Flag from 'react-world-flags'
 
 
@@ -9,24 +10,24 @@ export default function Home() {
   return (
     <main>
       <header>
-        <div className="box-border bg-boldBlack border-[0.1rem]-boldBlackAlternative">
+        <div className="box-border bg-boldBlack border-[0.1rem]-bold-black-alternative">
           <div className="header" />
         </div>
       </header>
       <section className="cover">
-        <div className="section-center flex px-12">
+        <div className="section-center flex px-12 flex-col lg:flex-row">
           <div className="info">
             <div className="info-title font-source">Hi, I&rsquo;m</div>
-            <h1 className="name text-[6em] pr-4 relative">Fabian Torres</h1>
-            <div className="flex flex-col text-boldGrey">
+            <h1 className="name">Fabian Torres</h1>
+            <div className="flex flex-col">
               <div className="more-item">👨‍💻 Senior Software Developer</div>
               <div className="more-item">🏡 Cordoba, Argentina</div>
             </div>
-            <div className="button-wrapper">
-              <button className="contact-button w-60" type="button">Contact me</button>
+            <div className="button-wrapper hidden">
+              <button className="contact-button" type="button">Contact me</button>
             </div>
           </div>
-          <div className="profile my-6 mx-0">
+          <div className="profile">
             <Image alt="Fabian Torres"
                       fill={true}
                       src="/img/sl8477.webp"
@@ -34,39 +35,42 @@ export default function Home() {
                       priority={false}
                       style={{ objectFit: 'contain'}}
                       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO0dXSvBwACzgFG0/TLDgAAAABJRU5ErkJggg==" />
-            <svg className="confetti-yellow" viewBox="0 0 56 34" style={{ minWidth: '5.5em', maxWidth: '5.5em', width: '5.5em', minHeight: '3.3em', maxHeight: '3.3em', height: '3.3em' }}>
+            <svg className="confetti-yellow" viewBox="0 0 56 34" style={{ minWidth: '5.5rem', maxWidth: '5.5rem', width: '5.5rem', minHeight: '3.3rem', maxHeight: '3.3rem', height: '3.3rem' }}>
               <path d="M0 33.5L36.5 0L55.5 12L36.5 33.5H0Z" fill="#F3FD53" />
             </svg>
-            <svg className="confetti-black" viewBox="0 0 43 51" style={{ minWidth: '4.2em', maxWidth: '4.2em', width: '4.2em', minHeight: '5em', maxHeight:'5em', height: '5em' }}>
+            <svg className="confetti-black" viewBox="0 0 43 51" style={{ minWidth: '4.2rem', maxWidth: '4.2rem', width: '4.2rem', minHeight: '5rem', maxHeight: '5rem', height: '5rem' }}>
               <path d="M9.5 38L0 0L42.5 30L36 50.5L9.5 38Z" fill="black" />
             </svg>
-            <svg className="confetti-blue" viewBox="0 0 25 35" style={{ minWidth: '2.4em', maxWidth: '2.4em', width: '2.4em', minHeight: '3.4em', maxHeight: '3.4em', height: '3.4em' }}>
+            <svg className="confetti-blue" viewBox="0 0 25 35" style={{ minWidth: '2.4rem', maxWidth: '2.4rem', width: '2.4em', minHeight: '3.4rem', maxHeight: '3.4rem', height: '3.4rem' }}>
               <path d="M0 23L20.5 0L24.5 27.5L15 34.5L0 23Z" fill="#2D70F6" />
             </svg>
+          </div>
+          <div className="button-wrapper text-center mb-4 lg:hidden">
+            <Link href={'mailto:fa.iverson@gmail.com'} className="contact-button" type="button">Contact me</Link>
           </div>
         </div>
       </section>
 
       {/* summary */}
       <section className="summary">
-        <div className="section-center px-12">
-          <h2 className="subtitle">Summary</h2>
+        <div className="section-center">
+          <h2 className="subtitle px-4 lg:px-12">Summary</h2>
           <div className="summary-wrapper">
-              <div className="summary-icon">
-                <svg viewBox="0 0 232 192" style={{ minWidth: '31.1em', maxWidth: '31.1em', width: '31.1em', minHeight: '15.1em', maxHeight: '15.1em', height: '15.1em' }}>
-                  <path d="M87.2139 28.7496L110.458 51.2244L106.553 8.46097L89.2154 4.6467L87.2139 28.7496Z" fill="rgb(243, 253, 83)" />
-                  <path d="M85.8939 72.3088L110.797 67.1468L92.7888 52.9374L83.8638 56.8396L85.8939 72.3088Z" fill="rgb(218, 221, 223)" />
-                  <rect width="284.781" height="29.7162" transform="matrix(-1 0 0 1 185.78 161.788)" fill="rgb(45, 112, 246)" />
-                  <path d="M101.731 85.0062C106.314 80.4235 113.77 80.4238 118.354 85.0072C119.764 86.4183 128.765 95.4272 130.14 96.8036V65.7571C130.14 62.6177 131.363 59.6664 133.583 57.4467L144.663 46.3657C146.883 44.1457 149.835 42.9233 152.974 42.9233H220.247C226.727 42.9233 232 48.1957 232 54.6763V164.893C232 171.374 226.727 176.646 220.247 176.646H141.893C135.413 176.646 130.14 171.374 130.14 164.893V130.06L101.732 101.628C97.1382 97.0344 97.1372 89.5998 101.731 85.0062ZM153.646 50.7587C152.906 50.7587 151.48 50.6304 150.204 51.906L139.123 62.987C137.88 64.2305 137.975 65.5931 137.975 66.4294H153.646V50.7587ZM137.976 164.893C137.976 167.054 139.733 168.811 141.893 168.811H220.247C222.407 168.811 224.164 167.054 224.164 164.893V54.6763C224.164 52.5161 222.407 50.7587 220.247 50.7587H161.482V70.347C161.482 72.5106 159.728 74.2647 157.564 74.2647H137.976V104.646C137.976 104.646 149.534 116.214 149.534 116.214L155.072 121.752C155.502 122.182 155.826 122.706 156.019 123.283L161.559 139.905C162.029 141.312 161.662 142.865 160.613 143.914C159.562 144.965 158.009 145.329 156.604 144.86L139.982 139.32C139.405 139.128 138.881 138.804 138.451 138.373L137.976 137.898V164.893ZM146.762 124.522L141.221 130.063L143.338 132.179L151.648 134.949L148.878 126.638L146.762 124.522ZM135.682 124.521L141.222 118.981C138.272 116.028 125.169 102.914 122.39 100.133L116.85 105.673L135.682 124.521ZM107.273 96.0882L111.312 100.13L116.852 94.5898L112.812 90.5465C111.284 89.0189 108.799 89.0192 107.271 90.5465C105.744 92.0744 105.736 94.5512 107.273 96.0882Z" fill="rgb(218, 221, 223)" />
-                  <path d="M157.565 82.1001H212.413C214.576 82.1001 216.33 83.8542 216.33 86.0178C216.33 88.1814 214.576 89.9354 212.413 89.9354H157.565C155.402 89.9354 153.648 88.1814 153.648 86.0178C153.648 83.8542 155.402 82.1001 157.565 82.1001Z" fill="rgb(218, 221, 223)" />
-                  <path d="M173.236 97.7708H212.413C214.576 97.7708 216.33 99.5248 216.33 101.688C216.33 103.852 214.576 105.606 212.413 105.606H173.236C171.072 105.606 169.318 103.852 169.318 101.688C169.318 99.5248 171.072 97.7708 173.236 97.7708Z" fill="rgb(243, 253, 83)" />
-                  <path d="M173.236 113.441H212.413C214.576 113.441 216.33 115.195 216.33 117.359C216.33 119.523 214.576 121.277 212.413 121.277H173.236C171.072 121.277 169.318 119.523 169.318 117.359C169.318 115.195 171.072 113.441 173.236 113.441Z" fill="rgb(218, 221, 223)" />
-                  <path d="M173.236 129.112H212.413C214.576 129.112 216.33 130.866 216.33 133.03C216.33 135.193 214.576 136.947 212.413 136.947H173.236C171.072 136.947 169.318 135.193 169.318 133.03C169.318 130.866 171.072 129.112 173.236 129.112Z" fill="rgb(243, 253, 83)" />
-                  <path d="M157.565 153.14H181.071C183.235 153.14 184.989 154.894 184.989 157.058C184.989 159.222 183.235 160.976 181.071 160.976H157.565C155.401 160.976 153.647 159.222 153.647 157.058C153.647 154.894 155.401 153.14 157.565 153.14Z" fill="rgb(218, 221, 223)" />
-                  <path d="M139.555 168.392H-26.3606V176.646H146.159L139.555 168.392Z" fill="rgb(218, 221, 223)" />
-                </svg>
+            <div className="summary-icon">
+              <svg viewBox="0 0 232 192">
+                <path d="M87.2139 28.7496L110.458 51.2244L106.553 8.46097L89.2154 4.6467L87.2139 28.7496Z" fill="rgb(243, 253, 83)" />
+                <path d="M85.8939 72.3088L110.797 67.1468L92.7888 52.9374L83.8638 56.8396L85.8939 72.3088Z" fill="rgb(218, 221, 223)" />
+                <rect width="284.781" height="29.7162" transform="matrix(-1 0 0 1 185.78 161.788)" fill="rgb(45, 112, 246)" />
+                <path d="M101.731 85.0062C106.314 80.4235 113.77 80.4238 118.354 85.0072C119.764 86.4183 128.765 95.4272 130.14 96.8036V65.7571C130.14 62.6177 131.363 59.6664 133.583 57.4467L144.663 46.3657C146.883 44.1457 149.835 42.9233 152.974 42.9233H220.247C226.727 42.9233 232 48.1957 232 54.6763V164.893C232 171.374 226.727 176.646 220.247 176.646H141.893C135.413 176.646 130.14 171.374 130.14 164.893V130.06L101.732 101.628C97.1382 97.0344 97.1372 89.5998 101.731 85.0062ZM153.646 50.7587C152.906 50.7587 151.48 50.6304 150.204 51.906L139.123 62.987C137.88 64.2305 137.975 65.5931 137.975 66.4294H153.646V50.7587ZM137.976 164.893C137.976 167.054 139.733 168.811 141.893 168.811H220.247C222.407 168.811 224.164 167.054 224.164 164.893V54.6763C224.164 52.5161 222.407 50.7587 220.247 50.7587H161.482V70.347C161.482 72.5106 159.728 74.2647 157.564 74.2647H137.976V104.646C137.976 104.646 149.534 116.214 149.534 116.214L155.072 121.752C155.502 122.182 155.826 122.706 156.019 123.283L161.559 139.905C162.029 141.312 161.662 142.865 160.613 143.914C159.562 144.965 158.009 145.329 156.604 144.86L139.982 139.32C139.405 139.128 138.881 138.804 138.451 138.373L137.976 137.898V164.893ZM146.762 124.522L141.221 130.063L143.338 132.179L151.648 134.949L148.878 126.638L146.762 124.522ZM135.682 124.521L141.222 118.981C138.272 116.028 125.169 102.914 122.39 100.133L116.85 105.673L135.682 124.521ZM107.273 96.0882L111.312 100.13L116.852 94.5898L112.812 90.5465C111.284 89.0189 108.799 89.0192 107.271 90.5465C105.744 92.0744 105.736 94.5512 107.273 96.0882Z" fill="rgb(218, 221, 223)" />
+                <path d="M157.565 82.1001H212.413C214.576 82.1001 216.33 83.8542 216.33 86.0178C216.33 88.1814 214.576 89.9354 212.413 89.9354H157.565C155.402 89.9354 153.648 88.1814 153.648 86.0178C153.648 83.8542 155.402 82.1001 157.565 82.1001Z" fill="rgb(218, 221, 223)" />
+                <path d="M173.236 97.7708H212.413C214.576 97.7708 216.33 99.5248 216.33 101.688C216.33 103.852 214.576 105.606 212.413 105.606H173.236C171.072 105.606 169.318 103.852 169.318 101.688C169.318 99.5248 171.072 97.7708 173.236 97.7708Z" fill="rgb(243, 253, 83)" />
+                <path d="M173.236 113.441H212.413C214.576 113.441 216.33 115.195 216.33 117.359C216.33 119.523 214.576 121.277 212.413 121.277H173.236C171.072 121.277 169.318 119.523 169.318 117.359C169.318 115.195 171.072 113.441 173.236 113.441Z" fill="rgb(218, 221, 223)" />
+                <path d="M173.236 129.112H212.413C214.576 129.112 216.33 130.866 216.33 133.03C216.33 135.193 214.576 136.947 212.413 136.947H173.236C171.072 136.947 169.318 135.193 169.318 133.03C169.318 130.866 171.072 129.112 173.236 129.112Z" fill="rgb(243, 253, 83)" />
+                <path d="M157.565 153.14H181.071C183.235 153.14 184.989 154.894 184.989 157.058C184.989 159.222 183.235 160.976 181.071 160.976H157.565C155.401 160.976 153.647 159.222 153.647 157.058C153.647 154.894 155.401 153.14 157.565 153.14Z" fill="rgb(218, 221, 223)" />
+                <path d="M139.555 168.392H-26.3606V176.646H146.159L139.555 168.392Z" fill="rgb(218, 221, 223)" />
+              </svg>
             </div>
-            <div className="break-words w-8/12 text-boldGrey text-base max-w-[38.11em]">
+            <div className="break-words w-8/12 text-bold-grey text-base pr-4 lg:pr-12 lg:max-w-[38.11em]">
               <p>I am an accomplished Software Developer boasting 20 years of extensive experience across diverse project environments. My career has been marked by a strong commitment to teamwork and a relentless focus on delivering client-centric solutions. My skill set primarily centers around JavaScript and PHP. I am proficient in both, where I&apos;ve not only mastered the languages but also several frameworks and libraries.</p>
             </div>
           </div>
@@ -83,8 +87,8 @@ export default function Home() {
                 <svg className="icon" viewBox="0 0 56 34" style={{ minWidth: '5.5em', maxWidth: '5.5em', width: '5.5em', minHeight: '3.3em', maxHeight: '3.3em', height: '3.3em' }}>
                   <path d="M0 33.5L36.5 0L55.5 12L36.5 33.5H0Z" fill="#F3FD53" />
                 </svg>
-                <div className="number">21</div>
-                <div className="content"><span>&nbsp;years of professional experience</span></div>
+                <div className="number">+20</div>
+                <div className="content"><span>&nbsp;years of Professional Experience</span></div>
               </div>
             </div>
             <div className="wrapper-item">
@@ -93,7 +97,7 @@ export default function Home() {
                   <path d="M0 33.5L36.5 0L55.5 12L36.5 33.5H0Z" fill="#F3FD53" />
                 </svg>
                 <div className="number">2</div>
-                <div className="content"><span>&nbsp;languages</span></div>
+                <div className="content"><span>&nbsp;Languages</span></div>
               </div>
             </div>
             <div className="wrapper-item">
@@ -101,8 +105,8 @@ export default function Home() {
                 <svg className="icon" viewBox="0 0 56 34" style={{ minWidth: '5.5em', maxWidth: '5.5em', width: '5.5em', minHeight: '3.3em', maxHeight: '3.3em', height: '3.3em' }}>
                   <path d="M0 33.5L36.5 0L55.5 12L36.5 33.5H0Z" fill="#F3FD53" />
                 </svg>
-                <div className="number">10</div>
-                <div className="content"><span>&nbsp;past years working with Laravel</span></div>
+                <div className="number">+10</div>
+                <div className="content"><span>&nbsp;of Experience with Laravel</span></div>
               </div>
             </div>
             <div className="wrapper-item">
@@ -110,8 +114,8 @@ export default function Home() {
                 <svg className="icon" viewBox="0 0 56 34" style={{ minWidth: '5.5em', maxWidth: '5.5em', width: '5.5em', minHeight: '3.3em', maxHeight: '3.3em', height: '3.3em' }}>
                   <path d="M0 33.5L36.5 0L55.5 12L36.5 33.5H0Z" fill="#F3FD53"></path>
                 </svg>
-                <div className="number">5</div>
-                <div className="content"><span>&nbsp;past years working with React</span></div>
+                <div className="number">+5</div>
+                <div className="content"><span>&nbsp;of Experience with React</span></div>
               </div>
             </div>
           </div>
@@ -127,28 +131,28 @@ export default function Home() {
               <div className="text"><span><p>Laravel</p></span></div>
             </div>
             <div className="item">
-              <div className="text"><span><p>Drupal, Zend, Codeigniter, WordPress, Joomla, Slim, Yii, Tonic, CakePHP</p></span></div>
+              <div className="text"><span><p>Drupal, Zend, CodeIgniter, WordPress, Joomla, Slim, Yii, Tonic, CakePHP</p></span></div>
             </div>
             <div className="item">
-              <div className="text"><span>Tools & IDE: DreamWeaver, Sublime, Text, Eclipse, NetBeans, Aptana, Websphere, PHPStorm</span></div>
+              <div className="text"><span>Tools & IDE experience: VSCode, Eclipse, NetBeans, Aptana, Websphere, PHPStorm, DreamWeaver, Sublime Text</span></div>
             </div>
             <div className="item">
-              <div className="text"><span><p>Prototype, MooTools, Extjs, Backbone.js, jQuery, Node.js, Express Js, Require.js, Angular.js, Backbone, Marionette,</p></span></div>
+              <div className="text"><span><p>Prototype, MooTools, Ext.js, Backbone.js, jQuery, Node.js, Express Js, Require.js, Angular.js, Backbone Marionette</p></span></div>
             </div>
             <div className="item">
               <div className="text"><span><p>React, Angular, Vue</p></span></div>
             </div>
             <div className="item">
-              <div className="text"><span>Methodologies: Agile (SCRUM)</span></div>
+              <div className="text"><span>Methodologies: Agile, Extreme Programming (XP), Feature-Driven Development (FDD), DevOps, CI/CD</span></div>
             </div>
             <div className="item">
               <div className="text"><span><p>Node</p></span></div>
             </div>
             <div className="item">
-              <div className="text"><span><p>REST, SOAP, GraphQL</p></span></div>
+              <div className="text"><span><p>RestAPI, SOAP, GraphQL</p></span></div>
             </div>
             <div className="item">
-              <div className="text"><span>MySQL, SQL Server, MongoDB, PostgreSQL</span></div>
+              <div className="text"><span>Databases: MySQL, SQL Server, MongoDB, PostgreSQL, FireBase</span></div>
             </div>
             <div className="item">
               <div className="text"><span><p>Design Patterns knowledge, Git, SASS, LESS</p></span></div>
@@ -197,7 +201,7 @@ export default function Home() {
                 <li>Developed conversion and system implementation plans.</li>
                 <li>I had the chance to write technical documentation to transfer knowledge to other team members</li>
                 <li>Carried out coding and architecture definition</li>
-                <li>Programming Languages: JavaScript, HTML, PHP (OOP), CSS</li>
+                <li>Programming Languages: JavaScript, HTML, PHP, CSS</li>
                 <li>Collaborated with project managers to select ambitious, but realistic coding milestones on pre-release software project development.</li>
               </ul>
             </Accordion>
@@ -236,7 +240,7 @@ export default function Home() {
       </section>
 
       {/* Accomplishments */}
-      <section className="accomplishments">
+      <section className="accomplishments overflow-hidden">
         <div className="section-center px-12">
           <h2 className="subtitle">Accomplishments 🎖</h2>
           <div className="text-white flex align-bottom gap-16 relative">
@@ -276,8 +280,8 @@ export default function Home() {
         <div className="section-center px-12">
           <h2 className="subtitle">Languages 🗣</h2>
           <div className="flex gap-12 text-white">
-            <div className="flex gap-2"><Flag code={'es'} width="24" /> Spanish</div>
-            <div className="flex gap-2"><Flag code={'us'} width="24" /> English</div>
+            <div className="flex gap-2"><Flag code={'es'} width="24" /> Spanish (native)</div>
+            <div className="flex gap-2"><Flag code={'us'} width="24" /> English (B2)</div>
           </div>
         </div>
       </section>
@@ -292,7 +296,7 @@ export default function Home() {
                 <div className="dot" />
                 <div className="item">
                   <div className="title">Senior Software Engineer</div>
-                  <div className="company">Onyxcorp LLC</div>
+                  <div className="company">OnyxCorp LLC</div>
                   <div className="date">2020.12 - 2023.09 (2 years & 9 months)</div>
                 </div>
               </div>

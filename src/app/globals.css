@@ -20,109 +20,60 @@
 }
 
 .header {
-  margin: auto;
-  display: block;
-  width: 100%;
+  @apply m-auto block w-full px-12 py-0 h-12;
   max-width: 117rem;
-  padding: 0px 3rem;
-  height: 50px;
 }
 
 .cover {
-  overflow: hidden;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  word-break: break-word;
-  background-color: rgb(61, 65, 71);
-  display: flex;
+  @apply overflow-hidden px-0 flex break-words bg-background;
   height: 550px;
 }
 
 .info {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
-  padding: 1em 0px;
+  @apply relative z-10 flex xl:w-1/2 w-full flex-col justify-center p-4 lg:py-0;
 }
 
 .info-title {
-  font-size: 2em;
-  line-height: 3rem;
-  white-space: pre-wrap;
-  word-break: break-all;
-  color: rgb(189, 193, 199);
+  @apply text-3xl whitespace-pre-wrap break-all text-bold-grey;
 }
 
 .name {
-  position: relative;
-  z-index: 0;
-  margin: 0px 0px 0.2em;
-  font-weight: 900;
-  line-height: 1.08em;
-  color: rgb(255, 255, 255);
+  @apply relative text-white font-black z-0 mb-1 text-4xl pr-4 xl:text-8xl;
 }
 
 .name::after {
-  position: absolute;
+  @apply absolute inline-block bg-blue-confetti;
   z-index: -1;
   bottom: 0.15em;
   left: -1.41em;
-  display: inline-block;
   width: 3.45em;
   height: 0.36em;
   content: "";
-  background-color: rgb(45, 112, 246);
 }
 
 .more-item {
-  font-size: 1.2em;
-  text-transform: uppercase;
-  white-space: pre-wrap;
-  word-break: break-all;
-  margin: 0.5em;
+  @apply uppercase break-all whitespace-pre-wrap text-base text-bold-grey xl:text-lg xl:m-2;
 }
 
 .button-wrapper {
-  position: relative;
+  @apply relative xl:mt-8 mt-4;
   max-width: 21em;
-  margin-top: 2em;
 }
 
 .contact-button {
-  display: inline-block;
-  padding: 0.1em 1.2em 0px;
-  border: 0px;
-  border-radius: 3.2em;
-  cursor: pointer;
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 2.6;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: rgb(61, 65, 71);
-  background-color: rgb(243, 253, 83);
+  @apply inline-block uppercase cursor-pointer no-underline text-lg font-bold rounded-full px-6 py-2 bg-yellow-confetti text-background lg:text-2xl lg:w-60;
 }
 
 .confetti-yellow {
-  position: absolute;
-  top: -1.2em;
-  right: 4em;
+  @apply absolute right-0 top-[-1.5rem] lg:right-16 lg:top-[-1.2rem];
 }
 
 .confetti-black {
-  position: absolute;
-  bottom: 2em;
-  left: 0em;
+  @apply absolute left-[-2.5rem] bottom-12 lg:left-0 lg:bottom-[2rem];
 }
 
 .confetti-blue {
-  position: absolute;
-  right: 1.5em;
-  bottom: 10em;
+  @apply absolute right-[-1rem] bottom-28 lg:right-6 lg:bottom-40;
 }
 
 .overview,
@@ -145,33 +96,27 @@
   page-break-after: always;
 }
 
-.summary-icon {
-  position: absolute;
-  left: -13.5em;
+.summary-wrapper {
+  @apply relative flex items-center justify-end;
 }
 
-.summary-wrapper {
-  position: relative;
-  display: flex;
-  min-height: 16em;
-  align-items: center;
-  justify-content: flex-end;
+.summary-icon {
+  @apply absolute left-0 lg:left-[-13.5em] top-12;
 }
 
 .summary-icon::before {
-    position: absolute;
-    top: 12.72em;
-    left: -97em;
-    display: inline-block;
-    width: 100em;
-    height: 2.35em;
-    background: rgb(45, 112, 246);
-    content: "";
+  @apply absolute hidden h-4 w-24 lg:h-9 lg:w-[100rem] bg-blue-confetti lg:inline-block;
+  top: 12.72em;
+  left: -97em;
+  content: "";
+}
+
+.summary-icon > svg {
+  @apply w-24 h-24 lg:w-[31rem] lg:h-[15rem];
 }
 
 .profile {
-  @apply relative flex justify-center text-center;
-  width: 50%;
+  @apply relative flex justify-center text-center w-full mx-0 h-full lg:w-1/2 lg:my-6;
 }
 
 .section-center {
@@ -199,14 +144,12 @@
 }
 
 .wrapper-item .item::before {
-  position: absolute;
+  @apply absolute bg-background inline-block;
   z-index: -1;
-  display: inline-block;
   width: 14.4em;
   height: 14.4em;
   border-radius: 50%;
   content: "";
-  background: rgb(61, 65, 71);
 }
 
 .item .icon {
@@ -222,9 +165,7 @@
 }
 
 .number {
-  @apply relative text-white font-bold;
-  font-size: 5em;
-  padding-left: 0.2em;
+  @apply relative text-white font-bold pl-1 text-5xl lg:text-7xl;
 }
 
 .number::before {
@@ -247,7 +188,6 @@
   font-size: 1.2em;
   font-weight: 300;
   line-height: 1.5;
-  text-transform: capitalize;
   color: rgb(211, 214, 217);
 }
 
@@ -260,16 +200,12 @@
 }
 
 .skills .item::before {
-  position: absolute;
+  @apply absolute inline-block border-blue-confetti border-solid bg-gray-900;
   top: 0.4rem;
   left: 1.3rem;
-  display: inline-block;
   width: 1.2em;
   height: 1.2em;
   border-width: 0.4em;
-  border-style: solid;
-  background-color: rgb(18, 18, 18);
-  border-color: rgb(243, 253, 83);
   border-radius: 50%;
   content: "";
 }
@@ -392,7 +328,7 @@
 }
 
 .date {
-  @apply text-base text-boldGrey;
+  @apply text-base text-bold-grey;
 }
 
 .title {
