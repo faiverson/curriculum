@@ -19,6 +19,7 @@ const config: Config = {
         'background': '#3D4147',
         'blue-confetti': '#2D70F6',
         'yellow-confetti': '#F3FD53',
+        'light-grey': '#d3d6d9',
       },
       aspectRatio: {
         'cover': '35/38',

@@ -1,19 +1,23 @@
 .accordion {
-  @apply pt-4 pb-2 w-full mb-8;
-  background-color: rgb(61, 65, 71);
+  @apply pt-2 mb-3 w-full border-solid bg-background lg:pt-4 lg:pb-2 lg:mb-8;
 }
 
 .accordion.left {
-  border-left: 0.8em solid rgb(243, 253, 83);
+  @apply border-l-[0.8rem];
 }
 
 .accordion.right {
-  border-right: 0.8em solid rgb(243, 253, 83);
+  @apply border-r-[0.8rem];
 }
 
-.accordion.left.secondary,
-.accordion.right.secondary {
-  border-color: #2D70F6;
+.accordion.primary,
+.accordion.primary {
+  @apply border-yellow-confetti;
+}
+
+.accordion.secondary,
+.accordion.secondary {
+  @apply border-blue-confetti;
 }
 
 .acc-header {
@@ -25,19 +29,18 @@
 }
 
 .toggle-btn {
-  width: 1.3em;
-  height: 1.3em;
+  @apply h-5 w-5;
   transition: all 0.3s ease 0s;
 }
 
 .description {
-  border-top: 0.1em dashed rgb(189, 193, 199);
+  @apply text-sm lg:text-base border-t-[0.1rem] border-dashed pt-2 lg:pt-4;
 }
 
 .left .description {
-  @apply pt-4 px-4;
+  @apply px-2 lg:px-4;
 }
 
 .right .description {
-  @apply pt-4 px-8;
+  @apply px-6 lg:px-8;
 }

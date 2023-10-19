@@ -1,8 +1,7 @@
 
 'use client'
 
-import React, { ReactNode, useState, useEffect } from 'react'
-import Image from 'next/image'
+import React, { ReactNode, useState } from 'react'
 import styles from './accordion.module.css'
 
 type Alignment = 'left' | 'right'
@@ -35,13 +34,13 @@ const Accordion: React.FC<MyComponentProps> = ({ alignment, type = Type.primary,
 
   return (
     <article className={`${styles.accordion} ${styles[alignment]} ${styles[type]}`}>
-      <div className="flex flex-col-2 justify-between px-4 pb-4">
+      <div className="flex flex-col-2 justify-between px-3 pb-2 lg:px-4 lg:pb-4">
         <div className={styles['acc-header']}>
-          <div className="flex gap-x-16 items-baseline">
-            <h3 className="text-2xl font-bold">{company}</h3>
-            <div className="text-base text-boldGrey">{date}</div>
+          <div className="flex flex-col items-baseline gap-y-2 lg:flex-row lg:gap-x-16">
+            <h3 className="text-xl lg:text-2xl font-bold">{company}</h3>
+            <div className="text-sm lg:text-base text-bold-grey">{date}</div>
           </div>
-          <h4 className="text-lg w-full">{position}</h4>
+          <h4 className="text-base lg:text-lg">{position}</h4>
         </div>
         <button className={open ? styles.up : styles.down} onClick={onToggle}>
           <svg viewBox="0 0 14 8" className="toggle-btn">
@@ -50,10 +49,8 @@ const Accordion: React.FC<MyComponentProps> = ({ alignment, type = Type.primary,
         </button>
       </div>
       {!!children  && <div className={styles.description}>
-        <div className="text-boldGrey ">Job overview</div>
-        <div className="mt-4 p-4">
-          {children}
-        </div>
+        <div className="text-bold-grey ">Job overview</div>
+        <div className="lg:my-4 lg:p-0 p-2">{children} </div>
       </div>}
     </article>
   )

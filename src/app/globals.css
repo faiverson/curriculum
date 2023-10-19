@@ -20,12 +20,12 @@
 }
 
 .header {
-  @apply m-auto block w-full px-12 py-0 h-12;
+  @apply m-auto block w-full px-12 py-0 h-4 lg:h-12;
   max-width: 117rem;
 }
 
 .cover {
-  @apply overflow-hidden px-0 flex break-words bg-background;
+  @apply overflow-hidden p-0 flex break-words bg-background;
   height: 550px;
 }
 
@@ -56,12 +56,17 @@
 }
 
 .button-wrapper {
-  @apply relative xl:mt-8 mt-4;
+  @apply relative mt-4 lg:mt-8;
   max-width: 21em;
 }
 
 .contact-button {
-  @apply inline-block uppercase cursor-pointer no-underline text-lg font-bold rounded-full px-6 py-2 bg-yellow-confetti text-background lg:text-2xl lg:w-60;
+  @apply inline-block uppercase cursor-pointer no-underline text-lg font-normal rounded-full px-6 py-2 bg-yellow-confetti text-background lg:text-2xl lg:w-60;
+}
+
+.contact-button {
+  padding: 0.1em 1.2em 0;
+  line-height: 2.6;
 }
 
 .confetti-yellow {
@@ -87,7 +92,7 @@
 .education,
 .languages,
 .timeline {
-  padding: 3em 0 1em;
+  @apply pt-6 lg:pt-12 px-0 pb-4;
 }
 
 .overview,
@@ -96,17 +101,22 @@
   page-break-after: always;
 }
 
+.work article:last-child,
+.education article:last-child {
+  @apply mb-0;
+}
+
 .summary-wrapper {
-  @apply relative flex items-center justify-end;
+  @apply relative flex items-center lg:justify-end gap-6;
 }
 
 .summary-icon {
-  @apply absolute left-0 lg:left-[-13.5em] top-12;
+  @apply h-full;
 }
 
 .summary-icon::before {
   @apply absolute hidden h-4 w-24 lg:h-9 lg:w-[100rem] bg-blue-confetti lg:inline-block;
-  top: 12.72em;
+  top: 12.68em;
   left: -97em;
   content: "";
 }
@@ -124,14 +134,14 @@
 }
 
 .subtitle {
-  @apply text-white text-xl uppercase font-bold mb-4
+  @apply text-white text-xl uppercase font-bold mb-4 px-4 lg:px-12;
 }
 
 .wrapper-item {
-  width: calc(50% - 1.6em);
-  position: relative;
-  overflow: hidden;
-  margin-top: 0em;
+  @apply relative overflow-hidden mt-0 m-auto w-64 lg:mr-0 lg:ml-auto;
+}
+.wrapper-item:nth-child(even) {
+  @apply lg:ml-0 lg:mr-auto;
 }
 
 .wrapper-item .item {
@@ -140,7 +150,6 @@
   display: flex;
   min-height: 16.4em;
   align-items: center;
-  padding: 0px 0px 2em;
 }
 
 .wrapper-item .item::before {
@@ -156,12 +165,6 @@
   position: absolute;
   top: 0.8em;
   left: 10.5em;
-}
-
-.wrapper-item:nth-child(2n) .icon {
-  left: 9.7em;
-  top: 1.5em;
-  transform: rotate(-80deg);
 }
 
 .number {
@@ -180,88 +183,25 @@
 }
 
 .number + div {
-  position: relative;
-  display: flex;
-  flex: 1 1 0%;
-  align-items: flex-end;
-  padding-left: 1em;
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 1.5;
-  color: rgb(211, 214, 217);
+  @apply relative flex items-end pl-4 font-light text-light-grey text-lg flex-1;
 }
 
-.skills .item {
-  color: rgb(189, 193, 199);
-  position: relative;
-  display: flex;
-  padding: 0px 2em 2em 0px;
-  width: 50%;
+ul.bullet li {
+  @apply text-base lg:text-xl text-bold-grey flex items-start gap-2 w-full py-1;
 }
 
-.skills .item::before {
-  @apply absolute inline-block border-blue-confetti border-solid bg-gray-900;
-  top: 0.4rem;
-  left: 1.3rem;
-  width: 1.2em;
-  height: 1.2em;
-  border-width: 0.4em;
-  border-radius: 50%;
-  content: "";
+.bullet .text {
+  @apply text-base lg:text-xl text-bold-grey;
+  flex: 1;
 }
 
-.skills .text {
-  margin-left: 2.5em;
-  font-size: 1.4em;
-  color: rgb(189, 193, 199);
+div.bullet {
+  @apply  border-blue-confetti border-solid bg-bold-black w-4 h-4 lg:w-5 lg:h-5 rounded-full mt-1;
+  border-width: 0.4rem;
 }
 
 .accomplishments .icon {
-  @apply absolute w-full;
-  top: 50%;
-}
-
-.icon::before {
-  position: absolute;
-  top: calc(50% + 42px);
-  left: 110px;
-  display: inline-block;
-  width: 100em;
-  height: 18px;
-  background: rgb(45, 112, 246);
-  content: "";
-}
-
-.accomplishments .icon::after {
-  position: absolute;
-  top: calc(50% + 47px);
-  left: 110px;
-  display: inline-block;
-  width: 100em;
-  height: 4px;
-  background: white;
-  content: "";
-}
-
-.accomplishments li::before {
-  position: absolute;
-  top: 0.3rem;
-  left: 0.3rem;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  border-width: 0.4em;
-  border-style: solid;
-  background-color: rgb(18, 18, 18);
-  border-color: #2D70F6;
-  border-radius: 50%;
-  content: "";
-}
-
-.accomplishments li {
-  margin-bottom: 10px;
-  padding-left: 2em;
-  position: relative;
+  @apply w-80
 }
 
 .timeline .row {
@@ -277,12 +217,8 @@
 }
 
 .line::before {
-  position: absolute;
-  left: 50%;
-  top: 1em;
-  bottom: 0px;
+  @apply absolute left-1/2 top-4 bottom-0 bg-white;
   width: 0.1em;
-  background-color: rgb(255, 255, 255);
   content: "";
 }
 
@@ -291,28 +227,19 @@
 }
 
 .timeline .row:nth-child(2n-1) .item-wrapper {
-  padding-left: 1.5em;
+  @apply pl-4 lg:pl-6;
 }
+
 .timeline .item {
   @apply flex flex-col;
 }
 
 .timeline .row:nth-child(2n) .item {
-  @apply flex flex-col pr-6;
-  text-align: right;
+  @apply flex flex-col text-right pr-4 lg:pr-6 ;
 }
 
 .timeline .dot {
-  position: absolute;
-  z-index: 1;
-  top: 0.5em;
-  width: 0.5em;
-  height: 0.5em;
-  border-width: 0.5em;
-  border-style: solid;
-  border-radius: 50%;
-  border-color: white;
-  background-color: white;
+  @apply z-10 absolute top-2 w-2 h-2 rounded-full border-solid border-white bg-white border-[0.5em];
 }
 
 .timeline .row:nth-child(2n) .dot {
@@ -324,13 +251,21 @@
 }
 
 .company {
-  @apply text-lg;
+  @apply text-base lg:text-lg;
 }
 
 .date {
-  @apply text-base text-bold-grey;
+  @apply text-xs lg:text-base text-bold-grey;
 }
 
 .title {
-  @apply text-lg font-bold;
+  @apply text-base lg:text-lg font-bold;
+}
+
+@media (min-width: 1280px) {
+  .wrapper-item:nth-child(2n) .icon {
+    left: 9.7em;
+    top: 1.5em;
+    transform: rotate(-80deg);
+  }
 }
