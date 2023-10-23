@@ -1,0 +1,20 @@
+
+.tag {
+  @apply px-2 lg:py-1 rounded-md w-fit whitespace-nowrap;
+}
+
+.blue {
+  @apply bg-blue-confetti text-white;
+}
+
+.yellow {
+  @apply bg-yellow-confetti text-black;
+}
+
+.grey {
+  @apply bg-light-grey text-white;
+}
+
+.green {
+  @apply bg-green-500 text-white;
+}

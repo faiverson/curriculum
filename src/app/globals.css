@@ -4,8 +4,7 @@
 
 @layer base {
   body {
-    @apply font-plex;
-    background-color: rgb(18, 18, 18);
+    @apply font-plex bg-bg-site;
   }
 }
 
@@ -20,17 +19,18 @@
 }
 
 .header {
-  @apply m-auto block w-full px-12 py-0 h-4 lg:h-12;
+  @apply m-auto block w-full px-12 py-0 h-4 md:h-12;
   max-width: 117rem;
 }
 
 .cover {
-  @apply overflow-hidden p-0 flex break-words bg-background;
-  height: 550px;
+  @apply overflow-hidden p-0 flex break-words bg-background ;
+  height: 400px;
+  max-height: 400px;
 }
 
 .info {
-  @apply relative z-10 flex xl:w-1/2 w-full flex-col justify-center p-4 lg:py-0;
+  @apply relative z-10 flex xl:w-1/2 w-full flex-col justify-center py-4 md:py-0;
 }
 
 .info-title {
@@ -42,12 +42,10 @@
 }
 
 .name::after {
-  @apply absolute inline-block bg-blue-confetti;
+  @apply absolute inline-block bg-blue-confetti w-[3.45em] h-[0.36em];
   z-index: -1;
   bottom: 0.15em;
   left: -1.41em;
-  width: 3.45em;
-  height: 0.36em;
   content: "";
 }
 
@@ -55,13 +53,9 @@
   @apply uppercase break-all whitespace-pre-wrap text-base text-bold-grey xl:text-lg xl:m-2;
 }
 
-.button-wrapper {
-  @apply relative mt-4 lg:mt-8;
-  max-width: 21em;
-}
-
 .contact-button {
-  @apply inline-block uppercase cursor-pointer no-underline text-lg font-normal rounded-full px-6 py-2 bg-yellow-confetti text-background lg:text-2xl lg:w-60;
+  @apply inline-block uppercase cursor-pointer no-underline text-lg font-normal rounded-full px-6 py-2 bg-yellow-confetti text-background md:text-2xl md:w-60
+ hover:text-bold-grey;
 }
 
 .contact-button {
@@ -70,15 +64,15 @@
 }
 
 .confetti-yellow {
-  @apply absolute right-0 top-[-1.5rem] lg:right-16 lg:top-[-1.2rem];
+  @apply absolute  w-12 h-6 right-16 top-[-1rem] md:right-4 md:top-0 md:w-[5.5rem] md:h-[3.3rem];
 }
 
 .confetti-black {
-  @apply absolute left-[-2.5rem] bottom-12 lg:left-0 lg:bottom-[2rem];
+  @apply absolute w-12 h-12 left-8 bottom-6 md:left-[-2rem] md:bottom-12 md:w-[4.2rem] md:h-[5rem];
 }
 
 .confetti-blue {
-  @apply absolute right-[-1rem] bottom-28 lg:right-6 lg:bottom-40;
+  @apply absolute right-[3rem] bottom-8 md:right-[-1rem] md:bottom-40 md:w-[2.4rem] md:h-[3.4rem] w-7 h-12;
 }
 
 .overview,
@@ -92,7 +86,7 @@
 .education,
 .languages,
 .timeline {
-  @apply pt-6 lg:pt-12 px-0 pb-4;
+  @apply pt-6 md:pt-12 px-0 pb-4;
 }
 
 .overview,
@@ -104,6 +98,10 @@
 .work article:last-child,
 .education article:last-child {
   @apply mb-0;
+}
+
+.work a {
+  @apply hover:underline hover:text-blue-confetti;
 }
 
 .summary-wrapper {
@@ -126,7 +124,7 @@
 }
 
 .profile {
-  @apply relative flex justify-center text-center w-full mx-0 h-full lg:w-1/2 lg:my-6;
+  @apply relative flex justify-center text-center w-full mx-0 lg:w-1/2 lg:my-6 h-full;
 }
 
 .section-center {
@@ -134,7 +132,7 @@
 }
 
 .subtitle {
-  @apply text-white text-xl uppercase font-bold mb-4 px-4 lg:px-12;
+  @apply text-white text-xl uppercase font-bold mb-4 px-4 lg:px-3;
 }
 
 .wrapper-item {
@@ -145,11 +143,8 @@
 }
 
 .wrapper-item .item {
-  position: relative;
-  z-index: 0;
-  display: flex;
+  @apply relative z-0 flex items-center;
   min-height: 16.4em;
-  align-items: center;
 }
 
 .wrapper-item .item::before {
@@ -201,7 +196,7 @@ div.bullet {
 }
 
 .accomplishments .icon {
-  @apply w-80
+  @apply w-96 absolute top-[15%] right-0 hidden lg:block;
 }
 
 .timeline .row {
@@ -209,11 +204,11 @@ div.bullet {
 }
 
 .row:nth-child(2n) {
-  justify-content: flex-start;
+  @apply justify-start;
 }
 
 .row:nth-child(2n-1) {
-  justify-content: flex-end;
+  @apply justify-end;
 }
 
 .line::before {
@@ -263,6 +258,15 @@ div.bullet {
 }
 
 @media (min-width: 1280px) {
+  .cover {
+    height: 550px;
+    max-height: 550px;
+  }
+
+  .profile {
+    height: inherit;
+  }
+
   .wrapper-item:nth-child(2n) .icon {
     left: 9.7em;
     top: 1.5em;

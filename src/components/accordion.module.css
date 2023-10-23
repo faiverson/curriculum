@@ -1,5 +1,5 @@
 .accordion {
-  @apply pt-2 mb-3 w-full border-solid bg-background lg:pt-4 lg:pb-2 lg:mb-8;
+  @apply mb-3 w-full border-solid bg-background lg:mb-8 lg:rounded;
 }
 
 .accordion.left {
@@ -20,6 +20,10 @@
   @apply border-blue-confetti;
 }
 
+.tags {
+  @apply flex gap-2 lg:text-sm flex-wrap lg:justify-end text-[.7rem];
+}
+
 .acc-header {
   @apply flex flex-col gap-y-2;
 }
@@ -34,13 +38,23 @@
 }
 
 .description {
-  @apply text-sm lg:text-base border-t-[0.1rem] border-dashed pt-2 lg:pt-4;
+  @apply text-sm lg:text-base border-t-[0.1rem] border-dashed py-4;
 }
 
 .left .description {
-  @apply px-2 lg:px-4;
+  @apply pl-2 pr-4 lg:pl-4 lg:pr-6;
 }
 
 .right .description {
-  @apply px-6 lg:px-8;
+  @apply pl-6 pr-4 lg:pl-8 lg:pr-4;
+}
+
+.content {
+  transition: height 0.7s ease;
+  overflow: hidden;
+}
+
+.slide-out {
+  animation: slide-out 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
