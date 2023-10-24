@@ -3,7 +3,7 @@
 
 import styles from './tag.module.css'
 
-type TagColor = 'blue' | 'yellow' | 'grey'
+type TagColor = 'blue' | 'yellow' | 'red' | 'green' | 'grey'
 
 interface MyComponentProps {
   text: string,
@@ -13,6 +13,7 @@ interface MyComponentProps {
 export const TagColor = {
   blue: 'blue',
   yellow: 'yellow',
+  red: 'red',
   green: 'green',
   grey: 'grey',
 }

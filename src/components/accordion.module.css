@@ -1,23 +1,21 @@
 .accordion {
-  @apply mb-3 w-full border-solid bg-background lg:mb-8 lg:rounded;
+  @apply mb-3 w-full border-solid dark:bg-background lg:mb-8 lg:rounded border dark:border-t-0 dark:border-b-0;
 }
 
 .accordion.left {
-  @apply border-l-[0.8rem];
+  @apply border-l-[0.8rem] dark:border-r-0;
 }
 
 .accordion.right {
-  @apply border-r-[0.8rem];
+  @apply border-r-[0.8rem] dark:border-l-0;
 }
 
-.accordion.primary,
 .accordion.primary {
-  @apply border-yellow-confetti;
+  @apply dark:border-yellow-confetti border-turquoise-confetti;
 }
 
-.accordion.secondary,
 .accordion.secondary {
-  @apply border-blue-confetti;
+  @apply dark:border-blue-confetti border-blue-400;
 }
 
 .tags {

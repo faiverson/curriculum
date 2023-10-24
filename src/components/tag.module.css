@@ -4,11 +4,15 @@
 }
 
 .blue {
-  @apply bg-blue-confetti text-white;
+  @apply bg-blue-confetti dark:bg-blue-400 text-white;
 }
 
 .yellow {
   @apply bg-yellow-confetti text-black;
+}
+
+.red {
+  @apply bg-red-confetti text-black;
 }
 
 .grey {
@@ -16,5 +20,5 @@
 }
 
 .green {
-  @apply bg-green-500 text-white;
+  @apply bg-turquoise-confetti text-white;
 }

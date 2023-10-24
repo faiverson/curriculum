@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { IBM_Plex_Sans, Source_Sans_3 } from 'next/font/google'
+import { ThemeProvider } from './providers/ThemeProvider'
 
 const plex = IBM_Plex_Sans({
   weight: ['400', '500', '600', '700'],
@@ -29,8 +30,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${plex.variable} ${source_sans.variable}`}>
-      <body className={plex.className}>{children}</body>
+    <html lang="en" className={`${plex.variable} ${source_sans.variable}`} suppressHydrationWarning>
+      <body className={plex.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

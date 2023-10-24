@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-plex bg-bg-site;
+    @apply font-plex dark:bg-site bg-neutral-50 ;
   }
 }
 
@@ -19,12 +19,11 @@
 }
 
 .header {
-  @apply m-auto block w-full px-12 py-0 h-4 md:h-12;
-  max-width: 117rem;
+  @apply m-auto w-full px-12 py-0 h-4 md:h-12 flex items-center;
 }
 
 .cover {
-  @apply overflow-hidden p-0 flex break-words bg-background ;
+  @apply overflow-hidden p-0 flex break-words dark:bg-background bg-gray-400;
   height: 400px;
   max-height: 400px;
 }
@@ -34,7 +33,7 @@
 }
 
 .info-title {
-  @apply text-3xl whitespace-pre-wrap break-all text-bold-grey;
+  @apply text-3xl whitespace-pre-wrap break-all dark:text-bold-grey text-stone-700;
 }
 
 .name {
@@ -42,7 +41,7 @@
 }
 
 .name::after {
-  @apply absolute inline-block bg-blue-confetti w-[3.45em] h-[0.36em];
+  @apply absolute inline-block dark:bg-blue-confetti bg-blue-400 w-[3.45em] h-[0.36em];
   z-index: -1;
   bottom: 0.15em;
   left: -1.41em;
@@ -50,12 +49,12 @@
 }
 
 .more-item {
-  @apply uppercase break-all whitespace-pre-wrap text-base text-bold-grey xl:text-lg xl:m-2;
+  @apply uppercase break-all whitespace-pre-wrap text-base dark:text-bold-grey text-gray-700 xl:text-lg xl:m-2;
 }
 
 .contact-button {
-  @apply inline-block uppercase cursor-pointer no-underline text-lg font-normal rounded-full px-6 py-2 bg-yellow-confetti text-background md:text-2xl md:w-60
- hover:text-bold-grey;
+  @apply inline-block uppercase cursor-pointer no-underline text-lg font-normal rounded-full px-6 py-2 bg-turquoise-confetti dark:bg-yellow-confetti text-background md:text-2xl md:w-60
+  hover:text-stone-100;
 }
 
 .contact-button {
@@ -63,15 +62,15 @@
   line-height: 2.6;
 }
 
-.confetti-yellow {
-  @apply absolute  w-12 h-6 right-16 top-[-1rem] md:right-4 md:top-0 md:w-[5.5rem] md:h-[3.3rem];
+.confetti-up {
+  @apply absolute w-12 h-6 right-16 top-[-1rem] md:right-4 md:top-0 md:w-[5.5rem] md:h-[3.3rem] lg:top-[-1rem];
 }
 
-.confetti-black {
+.confetti-left {
   @apply absolute w-12 h-12 left-8 bottom-6 md:left-[-2rem] md:bottom-12 md:w-[4.2rem] md:h-[5rem];
 }
 
-.confetti-blue {
+.confetti-right {
   @apply absolute right-[3rem] bottom-8 md:right-[-1rem] md:bottom-40 md:w-[2.4rem] md:h-[3.4rem] w-7 h-12;
 }
 
@@ -113,8 +112,8 @@
 }
 
 .summary-icon::before {
-  @apply absolute hidden h-4 w-24 lg:h-9 lg:w-[100rem] bg-blue-confetti lg:inline-block;
-  top: 12.68em;
+  @apply absolute hidden h-4 w-24 lg:h-[2.32rem] lg:w-[100rem] dark:bg-blue-confetti bg-blue-400 lg:inline-block;
+  top: 12.65em;
   left: -97em;
   content: "";
 }
@@ -132,23 +131,24 @@
 }
 
 .subtitle {
-  @apply text-white text-xl uppercase font-bold mb-4 px-4 lg:px-3;
+  @apply dark:text-white text-stone-800 text-xl uppercase font-bold mb-4 px-4 lg:px-3;
 }
 
 .wrapper-item {
-  @apply relative overflow-hidden mt-0 m-auto w-64 lg:mr-0 lg:ml-auto;
+  @apply relative overflow-hidden mt-0 m-auto w-64 lg:mr-0 lg:ml-auto ;
 }
+
 .wrapper-item:nth-child(even) {
   @apply lg:ml-0 lg:mr-auto;
 }
 
 .wrapper-item .item {
-  @apply relative z-0 flex items-center;
+  @apply relative z-0 flex items-center ;
   min-height: 16.4em;
 }
 
 .wrapper-item .item::before {
-  @apply absolute bg-background inline-block;
+  @apply absolute dark:bg-background bg-gray-400 inline-block;
   z-index: -1;
   width: 14.4em;
   height: 14.4em;
@@ -167,31 +167,30 @@
 }
 
 .number::before {
-  position: absolute;
+  @apply absolute bg-blue-400 dark:bg-blue-confetti;
   z-index: -1;
-  top: 0.35em;
-  left: 0.25em;
+  top: 0.25em;
+  left: 0.15em;
   width: 0.2125em;
   height: 0.4875em;
-  background: rgb(45, 112, 246);
   content: "";
 }
 
 .number + div {
-  @apply relative flex items-end pl-4 font-light text-light-grey text-lg flex-1;
+  @apply relative flex items-end pl-4 font-light dark:text-light-grey text-stone-700 text-lg flex-1;
 }
 
 ul.bullet li {
-  @apply text-base lg:text-xl text-bold-grey flex items-start gap-2 w-full py-1;
+  @apply text-base lg:text-xl dark:text-bold-grey text-stone-700 flex items-start gap-2 w-full py-1;
 }
 
 .bullet .text {
-  @apply text-base lg:text-xl text-bold-grey;
+  @apply text-base lg:text-xl dark:text-bold-grey text-stone-700;
   flex: 1;
 }
 
 div.bullet {
-  @apply  border-blue-confetti border-solid bg-bold-black w-4 h-4 lg:w-5 lg:h-5 rounded-full mt-1;
+  @apply  dark:border-blue-confetti border-red-confetti border-solid dark:bg-bold-black w-4 h-4 lg:w-5 lg:h-5 rounded-full mt-1;
   border-width: 0.4rem;
 }
 
@@ -212,7 +211,7 @@ div.bullet {
 }
 
 .line::before {
-  @apply absolute left-1/2 top-4 bottom-0 bg-white;
+  @apply absolute left-1/2 top-4 bottom-0 dark:bg-white bg-red-confetti;
   width: 0.1em;
   content: "";
 }
@@ -234,7 +233,7 @@ div.bullet {
 }
 
 .timeline .dot {
-  @apply z-10 absolute top-2 w-2 h-2 rounded-full border-solid border-white bg-white border-[0.5em];
+  @apply z-10 absolute top-2 w-2 h-2 rounded-full border-solid dark:border-white border-red-confetti dark:bg-white bg-red-confetti border-[0.5em];
 }
 
 .timeline .row:nth-child(2n) .dot {
@@ -245,16 +244,16 @@ div.bullet {
   left: -0.5em;
 }
 
-.company {
-  @apply text-base lg:text-lg;
+.title {
+  @apply text-base lg:text-lg dark:text-bold-grey text-stone-600;
 }
 
 .date {
-  @apply text-xs lg:text-base text-bold-grey;
+  @apply text-xs lg:text-sm dark:text-bold-grey text-stone-600;
 }
 
-.title {
-  @apply text-base lg:text-lg font-bold;
+.company {
+  @apply text-base lg:text-lg font-bold dark:text-bold-grey text-stone-700;
 }
 
 @media (min-width: 1280px) {
