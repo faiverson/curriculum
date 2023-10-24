@@ -4,22 +4,17 @@
 
 @layer base {
   body {
-    @apply font-plex dark:bg-site bg-neutral-50 ;
+    @apply font-plex dark:bg-site bg-neutral-50;
   }
 }
 
 @page {
   size: A4;
-  margin: 1cm;
 }
 
 *, ::after, ::before {
   box-sizing: border-box;
   transition: color 0.2s ease 0s, background-color 0.25s ease 0s, border-color 0.5s ease 0s, opacity 0.25s ease 0s, fill 0.15s ease 0s;
-}
-
-.header {
-  @apply m-auto w-full px-12 py-0 h-4 md:h-12 flex items-center;
 }
 
 .cover {
@@ -29,7 +24,7 @@
 }
 
 .info {
-  @apply relative z-10 flex xl:w-1/2 w-full flex-col justify-center py-4 md:py-0;
+  @apply relative z-10 flex xl:w-1/2 w-full flex-col justify-center py-4 md:py-0 print:py-0;
 }
 
 .info-title {
@@ -54,7 +49,7 @@
 
 .contact-button {
   @apply inline-block uppercase cursor-pointer no-underline text-lg font-normal rounded-full px-6 py-2 bg-turquoise-confetti dark:bg-yellow-confetti text-background md:text-2xl md:w-60
-  hover:text-stone-100;
+  print:text-2xl print:w-60 hover:text-stone-100;
 }
 
 .contact-button {
@@ -63,15 +58,18 @@
 }
 
 .confetti-up {
-  @apply absolute w-12 h-6 right-16 top-[-1rem] md:right-4 md:top-0 md:w-[5.5rem] md:h-[3.3rem] lg:top-[-1rem];
+  @apply absolute w-12 h-6 right-16 top-[-1rem] md:right-4 md:top-0 md:w-[5.5rem] md:h-[3.3rem] lg:top-[-1rem]
+    print:right-4 print:top-0 print:w-[5.5rem] print:h-[3.3rem];
 }
 
 .confetti-left {
-  @apply absolute w-12 h-12 left-8 bottom-6 md:left-[-2rem] md:bottom-12 md:w-[4.2rem] md:h-[5rem];
+  @apply absolute w-12 h-12 left-8 bottom-6 md:left-[-2rem] md:bottom-12 md:w-[4.2rem] md:h-[5rem]
+    print:left-[-2rem] print:bottom-12 print:w-[4.2rem] print:h-[5rem];
 }
 
 .confetti-right {
-  @apply absolute right-[3rem] bottom-8 md:right-[-1rem] md:bottom-40 md:w-[2.4rem] md:h-[3.4rem] w-7 h-12;
+  @apply absolute right-[3rem] bottom-8 md:right-[-1rem] md:bottom-40 md:w-[2.4rem] md:h-[3.4rem] w-7 h-12
+    print:right-[-1rem] print:bottom-40 print:w-[2.4rem] print:h-[3.4rem];
 }
 
 .overview,
@@ -80,7 +78,6 @@
 }
 
 .work,
-.skills,
 .accomplishments,
 .education,
 .languages,
@@ -88,10 +85,15 @@
   @apply pt-6 md:pt-12 px-0 pb-4;
 }
 
+.skills,{
+  @apply pt-2 md:pt-12 px-0 pb-4;
+}
+
 .overview,
 .work,
-.languages {
-  page-break-after: always;
+.accomplishments,
+.timeline {
+  page-break-before: always;
 }
 
 .work article:last-child,
@@ -144,7 +146,7 @@
 
 .wrapper-item .item {
   @apply relative z-0 flex items-center ;
-  min-height: 16.4em;
+  min-height: 14.4em;
 }
 
 .wrapper-item .item::before {

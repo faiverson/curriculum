@@ -1,7 +1,7 @@
 'use client'
 
 import React, { ReactNode, useRef, useState, useEffect } from 'react'
-import Tag, { TagColor } from 'components/tag'
+import Tag, { TagColor } from 'components/Tag'
 import styles from './accordion.module.css'
 
 type Alignment = 'left' | 'right'
@@ -31,7 +31,7 @@ const Type = {
 
 const Accordion: React.FC<MyComponentProps> = ({ alignment, type = Type.primary, company, date, position, industry, children }) => {
   const collapseRef = useRef<HTMLDivElement>(null)
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
   const [height, setHeight] = useState(0)
 
   const onToggle = () => setOpen(!open)

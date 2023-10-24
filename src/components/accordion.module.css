@@ -1,5 +1,6 @@
 .accordion {
   @apply mb-3 w-full border-solid dark:bg-background lg:mb-8 lg:rounded border dark:border-t-0 dark:border-b-0;
+  page-break-inside: avoid;
 }
 
 .accordion.left {
@@ -33,6 +34,14 @@
 .toggle-btn {
   @apply h-5 w-5;
   transition: all 0.3s ease 0s;
+}
+
+.primary .description{
+  @apply  border-turquoise-confetti dark:border-yellow-confetti;
+}
+
+.secondary .description{
+  @apply  dark:border-blue-confetti border-blue-400;
 }
 
 .description {

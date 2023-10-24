@@ -12,9 +12,9 @@ interface MyComponentProps {
 
 export const TagColor = {
   blue: 'blue',
+  green: 'green',
   yellow: 'yellow',
   red: 'red',
-  green: 'green',
   grey: 'grey',
 }
 
