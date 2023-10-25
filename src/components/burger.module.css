@@ -1,0 +1,4 @@
+.navbar{
+  @apply fixed dark:bg-background bg-gray-400 flex flex-col h-screen top-0 left-0 z-50;
+  transition: transform 0.3s ease-in-out;
+}

@@ -1,7 +1,10 @@
 "use client"
+
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import Accordion from 'components/Accordion'
+import Burger from 'components/Burger'
+import Navbar from 'components/Navbar'
 import ScrollToTopButton from 'components/ScrollToTopButton'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,22 +22,12 @@ export default function Home() {
     return null
   }
 
-  const handleScroll = (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    ev.preventDefault();
-    const href = ev.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   return (
     <>
       <main id='main'>
         <header>
-          <div className="box-border dark:bg-bold-black border-[0.1rem]-bold-black-alternative bg-neutral-100 h-4 md:h-12 print:pt-40">
-            <div className='flex flex-row-reverse'>
+          <div className="box-border dark:bg-bold-black border-[0.1rem]-bold-black-alternative bg-neutral-100 h-12 print:pt-40">
+            <div className='h-full flex flex-row-reverse justify-between'>
               <button className='pr-2 dark:text-white text-bg-bold-black hover:scale-110 active:scale-100 duration-200 ' onClick={() => theme === 'dark' ? setTheme('light') : setTheme('dark')}>
                 {theme === 'dark'
                   ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -45,16 +38,9 @@ export default function Home() {
                   </svg>
                 }
               </button>
-              <div className="w-full py-0 h-4 md:h-12 print:hidden flex items-center container mx-auto flex-auto max-w-6xl">
-                <nav className="uppercase flex gap-6 px-12 print:hidden">
-                  <Link href="#summary" onClick={handleScroll}>Summary</Link>
-                  <Link href="#overview" onClick={handleScroll}>Overview</Link>
-                  <Link href="#work-history" onClick={handleScroll}>Work</Link>
-                  <Link href="#education" onClick={handleScroll}>Education</Link>
-                  <Link href="#accomplishments" onClick={handleScroll}>Accomplishments</Link>
-                  <Link href="#languages" onClick={handleScroll}>Languages</Link>
-                  <Link href="#timeline" onClick={handleScroll}>Timeline</Link>
-                </nav>
+              <Burger />
+              <div className="w-full py-0 print:hidden md:flex items-center container mx-auto flex-auto max-w-6xl hidden">
+                <Navbar className="uppercase flex gap-6 px-12 print:hidden" />
               </div>
             </div>
           </div>
@@ -126,7 +112,7 @@ export default function Home() {
         <section id="overview" className="overview">
           <div className="section-center">
             <h2 className="subtitle">Overview</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 lg:gap-x-44 lg:gap-y-8 md:gap-y-4 print:gap-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 lg:gap-x-44 lg:gap-y-8 gap-y-4 print:gap-y-2">
               <div className="wrapper-item">
                 <div className="item">
                   <svg className="icon" viewBox="0 0 56 34" style={{ minWidth: '5.5em', maxWidth: '5.5em', width: '5.5em', minHeight: '3.3em', maxHeight: '3.3em', height: '3.3em' }}>
