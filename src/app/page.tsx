@@ -55,7 +55,7 @@ export default function Home() {
                 <div className="more-item">🏡 Cordoba, Argentina</div>
               </div>
               <div className="hidden relative mt-4 md:mt-8 print:mt-8 md:block print:block">
-                <button className="contact-button" type="button">Contact me</button>
+                <button className="contact-button" type="button"><Link href={'mailto:fa.iverson@gmail.com'}>Contact me</Link></button>
               </div>
             </div>
             <div className="profile">
@@ -77,7 +77,7 @@ export default function Home() {
               </svg>
             </div>
             <div className="text-center my-4 md:hidden print:hidden">
-              <Link href={'mailto:fa.iverson@gmail.com'} className="contact-button" type="button">Contact me</Link>
+              <Link href={'mailto:fa.iverson@gmail.com'} className="contact-button" type="button"><Link href={'mailto:fa.iverson@gmail.com'}>Contact me</Link></Link>
             </div>
           </div>
         </section>
