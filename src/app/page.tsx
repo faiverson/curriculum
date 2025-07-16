@@ -127,7 +127,7 @@ export default function Home() {
                   <svg className="icon" viewBox="0 0 56 34" style={{ minWidth: '5.5em', maxWidth: '5.5em', width: '5.5em', minHeight: '3.3em', maxHeight: '3.3em', height: '3.3em' }}>
                     <path d="M0 33.5L36.5 0L55.5 12L36.5 33.5H0Z" className="fill-red-confetti dark:fill-yellow-confetti " />
                   </svg>
-                  <div className="number">2</div>
+                  <div className="number">+2</div>
                   <div><span>&nbsp;Languages</span></div>
                 </div>
               </div>
@@ -178,6 +178,17 @@ export default function Home() {
           <div className="section-center">
             <h2 className="subtitle">Work History 👨‍💼</h2>
             <div className="items dark:text-white text-stone-700">
+              <Accordion company={'Schreiber Foods'} date={'2023.12 - 2025.07 (2 years & 7 months)'} position={'Senior React Engineer'} alignment={'left'} industry={['Food', 'Agriculture', 'Sales']}>
+                <p><Link href="https://schreiberfoods.helixiq.sdlcloud.io" target="_blank">HelixIQ</Link> is a comprehensive pricing management and analytics platform designed to help businesses manage complex pricing structures, forward contracts, and market data. The application appears to be built for the food/agriculture industry, specifically for companies like Schreiber Foods.</p>
+                <p>I created the structure for the administration portal where the client can add and remove user licenses, configure global settings, view and handle devices and staff, assign roles and permissions.</p>
+                <p>The project tech stack is React 18 with Material-UI. AG Grid Enterprise for the data grid and authentication with AWS Amplify with Cognito</p>
+                <p>The platform has been designed for enterprise-level pricing operations, helping businesses unravel pricing complexities through a modern, scalable web application with robust data management capabilities.</p>
+              </Accordion>
+              <Accordion company={'Bedlam'} date={'2023.12 - 2024.04 (5 months)'} position={'Senior Software Engineer'} alignment={'right'} industry={['Stats', 'Video Games']}>
+                <p><Link href="https://x.com/bedlam_official?lang=bn" target="_blank">Bedlam</Link>  is the link in bio built for gamers. Here we talk about games, stats, and competitions.</p>
+                <p>Brought on to cover a colleague&apos;s vacation and, upon successful handover, extended my engagement to design and implement a suite of new features</p>
+                <p>I created a new user dashboard with stats from different games using a Next.js 14 application and a new admin dashboard with a new design and new features</p>
+              </Accordion>
               <Accordion company={'OnyxCorp LLC'} date={'2017.04 - 2023.09 (6 years & 5 months)'} position={'Senior Software Engineer'} alignment={'left'} industry={['Cybersecurity', 'Communication Technology', 'Information Technology']}>
                 <p><Link href="https://mode.io" target="_blank">Mode</Link> is a secure communication platform with post-quantum encryption for messaging, video calling, and file sharing.</p>
                 <p>I created the structure for the administration portal where the client can add and remove user licenses, configure global settings, view and handle devices and staff, assign roles and permissions.</p>
@@ -341,6 +352,26 @@ export default function Home() {
                 <div className="item-wrapper">
                   <div className="dot" />
                   <div className="item">
+                    <div className="company">Schreiber Foods</div>
+                    <div className="title">Senior React Engineer</div>
+                    <div className="date">Dec 2023 - Jul 2025</div>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="item-wrapper">
+                  <div className="dot" />
+                  <div className="item">
+                    <div className="company">Bedlam</div>
+                    <div className="title">Senior Software Engineer</div>
+                    <div className="date">Dec 2023 - Apr 2024</div>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="item-wrapper">
+                  <div className="dot" />
+                  <div className="item">
                     <div className="company">OnyxCorp LLC</div>
                     <div className="title">Senior Software Engineer</div>
                     <div className="date">Apr 2017 - Sep 2023</div>
@@ -354,16 +385,6 @@ export default function Home() {
                     <div className="company">Rack Performance</div>
                     <div className="title">Senior Software Engineer</div>
                     <div className="date">Mar 2013 - Dec 2020</div>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="item-wrapper">
-                  <div className="dot" />
-                  <div className="item">
-                    <div className="company">AthleteEquip</div>
-                    <div className="title">Senior Software Engineer</div>
-                    <div className="date">Oct 2016 - Nov 2017</div>
                   </div>
                 </div>
               </div>
