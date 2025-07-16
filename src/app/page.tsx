@@ -39,7 +39,7 @@ export default function Home() {
                 }
               </button>
               <Burger />
-              <div className="w-full py-0 print:hidden md:flex items-center container mx-auto flex-auto max-w-6xl hidden">
+              <div className="py-0 print:hidden md:flex items-center container mx-auto flex-auto max-w-6xl hidden">
                 <Navbar className="uppercase flex gap-6 px-12 print:hidden" />
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function Home() {
               </svg>
             </div>
             <div className="text-center my-4 md:hidden print:hidden">
-              <Link href={'mailto:fa.iverson@gmail.com'} className="contact-button" type="button"><Link href={'mailto:fa.iverson@gmail.com'}>Contact me</Link></Link>
+              <Link href={'mailto:fa.iverson@gmail.com'} className="contact-button" type="button">Contact me</Link>
             </div>
           </div>
         </section>
